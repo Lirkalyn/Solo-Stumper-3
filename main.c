@@ -54,14 +54,14 @@ int convert(char *str1, char *str2, int *nb1, int *nb2)
         if (str2[i] >= '0' && str2[i] <= '9') {
             *nb2 *= 10;
             *nb2 += (str2[i] - '0');
-    }
+        }
     if (str1[0] == '-')
         *nb1 *= (-1);
     if (str2[0] == '-')
         *nb2 *= (-1);
     if (*nb1 > *nb2)
         return error_is();
-        return 0;
+    return 0;
 }
 
 int main(int argc, char *argv[])
